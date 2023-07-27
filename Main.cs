@@ -15,13 +15,12 @@ public class Main : BloonsTD6Mod
     {
         displayName = "Multiplier",
         description = "The multiplier for all spawned bloons",
-        
-        minValue = 1,
+        min = 1
     };
 
     public override void OnNewGameModel(GameModel result)
     {
-        result.GetRoundSet().rounds.ForEach(round =>
+        result.roundSet.rounds.ForEach(round =>
         {
             round.groups.ForEach(group =>
             {
